@@ -1,0 +1,8 @@
+[sources.in]
+type = "stdin"
+
+[sinks.vector_aggregator]
+type = "vector"
+inputs = [ "in" ]
+address = "172.10.1.3:9000"
+version = "1"
