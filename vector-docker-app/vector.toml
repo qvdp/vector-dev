@@ -1,0 +1,18 @@
+[sources.http_server_1]
+type = "vector"
+acknowledgements = true
+shutdown_timeout_secs = 240
+address = "172.10.1.1:9000"
+version = "1"
+
+[sources.http_server_2]
+type = "vector"
+acknowledgements = true
+shutdown_timeout_secs = 240
+address = "172.10.1.2:9000"
+version = "1"
+
+[sinks.out]
+inputs = ["http_server_1", "http_server_2"]
+type = "console"
+encoding.codec = "text"
